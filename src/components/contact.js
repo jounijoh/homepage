@@ -41,6 +41,7 @@ export default function Contact() {
         </Card.Body>
       </Card>
       <br/>
+      <br/>
     <h3>Anything to comment? Write message below!</h3>
       <Form onSubmit={handleSubmit} id="contact-form">
         <Form.Group className="mb-3" controlId="name">
@@ -71,8 +72,10 @@ export default function Contact() {
             onChange={(event) => setMessage(event.target.value)}
           />
         </Form.Group>
-        <Button type="submit">Submit</Button>
+        <Button  type="submit">Submit</Button>
       </Form>
+      <br/>
     </Container>
+    
   );
 }
