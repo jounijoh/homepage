@@ -15,7 +15,7 @@ export default function ControlledCarousel() {
           <img
             className="d-block w-100"
             src="https://firebasestorage.googleapis.com/v0/b/digitekniikatlopputyo.appspot.com/o/frontPageImages%2Fomakuva.jpg?alt=media&token=f94ed0b5-7561-4493-91ca-116b246fbecb"
-            alt="Me taking photo with Bronica SQ-A, photo by Janne Enberg"
+            alt="Me on a field with Bronica SQ-A, taken by Janne Enberg"
           />
           <Carousel.Caption>
             <h2>Welcome to FilmPic</h2>
@@ -26,7 +26,7 @@ export default function ControlledCarousel() {
           <img
             className="d-block w-100 h-90"
             src="https://firebasestorage.googleapis.com/v0/b/digitekniikatlopputyo.appspot.com/o/frontPageImages%2Fbudapestissa.jpg?alt=media&token=132dc8ce-ad22-4892-97e2-df23d05138e5"
-            alt="Me with my friends in Budabest, photo by unkown friend using my camera"
+            alt="Me with my friends in Budabest, taken by unkown friend using my camera"
           />
   
           <Carousel.Caption>
