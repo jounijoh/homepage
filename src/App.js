@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import ImageGallery from "./components/YourPhotos"
+import ResponsiveAppBar from "./components/appBar";
+import HomePage from "./components/HomePage";
+import "./App.css";
+import ScrollButton from "./components/ScrollButton";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MyPhotos from "./components/Myphotos";
+import SimpleBottomNavigation from "./components/bottom";
+import Contact from "./components/contact";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <BrowserRouter>
+        <ResponsiveAppBar/>
+        <Routes>
+          {["/", "/homepage"].map((path) => (
+            <Route path={path} element={<HomePage />} />
+          ))}
+          <Route path="/myphotos" element={<MyPhotos />} />
+          <Route path="/photodump" element={<ImageGallery />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <SimpleBottomNavigation />
+      </BrowserRouter>
+      <ScrollButton />
+      <br/>
+     
     </div>
+    
   );
 }
 

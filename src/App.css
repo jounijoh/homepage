@@ -2,37 +2,300 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: rgb(20, 30, 35);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*
+header {
   display: flex;
-  flex-direction: column;
+  background-color: rgb(50, 75, 90);
+  font-size: 1em;
+  padding: 1%;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+*/
+* {
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(255, 255, 255);
+}
+
+
+/*NAVIGAATIO*/
+
+nav {
+  width: 100%;
+  text-align: center;
+  background-color: rgb(50, 75, 90);
+  position: sticky;
+  top: 0;
+  font-weight:bold;
+  font-size: 1.8em;
+  border-radius: 5px;
+  padding: 0.2%;
+  text-decoration: none;
+}
+
+
+
+
+
+li {
+  display: inline;
+  
+}
+
+
+/* ALOITUSSIVUNKUVA */
+
+.aloituskuva {
+  position: relative;
+  text-align: left;
+  color: rgb(255, 255, 255);
+}
+
+img.omakuva {
+  margin: 0%;
+}
+
+.aloitusotsikko {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+}
+
+
+/* OTSIKOT */
+
+h1.logo {
+  margin: 0ch;
+  font-size: 9vw;
+  color: white;
+  font-family: "Brush Script MT", cursive;
+  text-shadow: -1px 0 black, 0 -1px black, -3px 0 black, 0 -1px black;
+}
+
+h1 {
+  margin: 4%;
+  font-size: 3vw;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5vw;
+}
+
+
+
+/* LEIPÄTEXTIT */
+
+div.txt {
+  width: 30%;
+}
+
+p {
+  margin-left: 3%;
+  font-size: 1em;
+}
+
+
+/* KUVAT */
+
+img {
+  max-width: 100%;
+}
+
+
+/* IG Linkki*/
+
+.fa-instagram {
+  background: rgb(50, 75, 90);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.fa:hover {
+  opacity: 0.7;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+
+/*FOOTER*/
+
+footer {
+  border-radius: 5px;
+  background-color: rgb(50, 75, 90);
+  position: relative;
+  bottom: 2%;
+  width: 100%;
+  text-align: center;
+}
+
+
+/*Linkit*/
+a {
+   text-decoration: none; 
   }
-  to {
-    transform: rotate(360deg);
+a:visited {
+  color: rgb(172, 124, 70);
+
+}
+input::file-selector-button {
+  
+  font-weight: bold;
+  color: rgb(30, 206, 255);
+  background-color: rgba(0, 0, 0, 0.258);
+  padding: 0.5em;
+  border: thin solid rgb(1, 17, 35);
+  border-radius: 3px;
+}
+#uploadButton{
+  font-weight: bold;
+  color: rgb(30, 206, 255);
+  background-color: rgba(0, 0, 0, 0.258);
+  padding: 0.5em;
+  border: thin solid rgb(1, 17, 35);
+  border-radius: 3px;
+}
+/*flex*/
+
+@media (orientation: landscape) {
+  #indexekatxt{
+      order: 1;
+  }
+  #indextokatxt{
+      order: 4;
+  }
+  #indeximg{
+      order: 3;
+  }
+  #indeximg2{
+      order: 2;
+  }
+  .flex_container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .flex_item_txt {
+      align-items: flex-start;
+      flex-basis: 40%;
+  }
+  .flex_item_img {
+      margin: 2%;
+      flex-basis: 30%;
   }
 }
+
+@media (orientation: portrait) {
+  h1.logo {
+      font-size: 8vw;
+  }
+  #ekakuva{
+      order: 1;
+  }
+  #ekateksti{
+      order: 2;
+  }
+  #tokakuva{
+      order: 3;
+  }
+  #tokateksti{
+      order: 4;
+  }
+  .flex_container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+  }
+  .flex_item_txt {
+      align-items: flex-start;
+      width: 80%;
+  }
+  .flex_item_img {
+      margin: 2%;
+      width: 80%;
+  }
+
+}
+
+
+
+
+/*GRIDGALLERIA*/
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+.row {
+  display: -ms-flexbox;
+  /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap;
+  /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+
+/* Create four equal columns that sits next to each other */
+
+.column {
+  -ms-flex: 25%;
+  /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+
+@media (orientation: portrait) {
+  .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+  }
+}
+
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 600px) {
+  .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+  }
+}
+
+Img {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input, textarea {
+  background-color: rgba(0, 0, 0, 0.258);
+  
+  }
+  
