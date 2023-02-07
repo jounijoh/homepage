@@ -18,7 +18,7 @@ export default function HomePage() {
               My interest in photography rose to a new level in 2019, when me
               and my friends went on vacation to Cuba. My friend Janne persuaded
               me to get a film camera for the trip (Nikon L35AF) and to try film
-              photography. I photographed on the trip over ten rolls of film and
+              photography. I photographed over ten rolls of film on the trip and
               when I saw the pictures developed and scanned, I was hooked.
             </p>
           </div>
@@ -35,7 +35,7 @@ export default function HomePage() {
               It was incredible to see how great the pictures, a small, 30 years
               old plastic camera was able to achieve. My interest in film
               photographity grew quickly and soon I owned many different film
-              cameras, as they still were dirt cheap at that time. The attached
+              cameras, as they were dirt cheap still at that time. The attached
               photo of the inside of an old Cadillac in Cuba was one of the
               first film pictures I've ever shot, yet it still remains as one of
               my all time favourites.
