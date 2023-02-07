@@ -5,39 +5,11 @@
 body {
   background-color: rgb(20, 30, 35);
 }
-/*
-header {
-  display: flex;
-  background-color: rgb(50, 75, 90);
-  font-size: 1em;
-  padding: 1%;
-  align-items: center;
-}
-*/
+
 * {
   font-family: "Courier New", Courier, monospace;
   color: rgb(255, 255, 255);
 }
-
-
-/*NAVIGAATIO*/
-
-nav {
-  width: 100%;
-  text-align: center;
-  background-color: rgb(50, 75, 90);
-  position: sticky;
-  top: 0;
-  font-weight:bold;
-  font-size: 1.8em;
-  border-radius: 5px;
-  padding: 0.2%;
-  text-decoration: none;
-}
-
-
-
-
 
 li {
   display: inline;
@@ -45,7 +17,7 @@ li {
 }
 
 
-/* ALOITUSSIVUNKUVA */
+/* HOMEPAGE IMG */
 
 .aloituskuva {
   position: relative;
@@ -64,7 +36,7 @@ img.omakuva {
 }
 
 
-/* OTSIKOT */
+/* HEADINGS */
 
 h1.logo {
   margin: 0ch;
@@ -86,7 +58,7 @@ h2 {
 
 
 
-/* LEIPÄTEXTIT */
+/* TXT */
 
 div.txt {
   width: 30%;
@@ -102,39 +74,6 @@ p {
 
 img {
   max-width: 100%;
-}
-
-
-/* IG Linkki*/
-
-.fa-instagram {
-  background: rgb(50, 75, 90);
-  color: white;
-}
-
-.fa:hover {
-  opacity: 0.7;
-}
-
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-}
-
-
-/*FOOTER*/
-
-footer {
-  border-radius: 5px;
-  background-color: rgb(50, 75, 90);
-  position: relative;
-  bottom: 2%;
-  width: 100%;
-  text-align: center;
 }
 
 
