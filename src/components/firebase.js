@@ -5,21 +5,22 @@ import {getStorage} from "firebase/storage"
 
 
 
+
 const firebaseConfig = {
 
-  apiKey: "AIzaSyCsgdKrhuaq8MlTRogeKOzM5XASe4l-VS4",
+  apiKey: process.env.REACT_APP_APIKEY,
 
-  authDomain: "digitekniikatlopputyo.firebaseapp.com",
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
 
-  projectId: "digitekniikatlopputyo",
+  projectId: process.env.REACT_APP_PROJECT_ID,
 
-  storageBucket: "digitekniikatlopputyo.appspot.com",
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
 
-  messagingSenderId: "776910205785",
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
 
-  appId: "1:776910205785:web:6c199a4246f98ff7b41248",
+  appId: process.env.REACT_APP_APP_ID,
 
-  databaseURL: "https://digitekniikatlopputyo-default-rtdb.europe-west1.firebasedatabase.app"
+  databaseURL: process.env.REACT_APP_DATABASE_URL
 
 };
 

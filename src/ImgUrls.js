@@ -1,0 +1,2 @@
+export const caddyUrl = "https://firebasestorage.googleapis.com/v0/b/digitekniikatlopputyo.appspot.com/o/frontPageImages%2Fkuuba2.jpg?alt=media&token=62ee175f-a50f-49bc-be00-7e28bbf586c5"
+export const crossroadsUrl = "https://firebasestorage.googleapis.com/v0/b/digitekniikatlopputyo.appspot.com/o/frontPageImages%2Fkuuba12.jpg?alt=media&token=87636dc5-014d-4223-9a35-493000596129"

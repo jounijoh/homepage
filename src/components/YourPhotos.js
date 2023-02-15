@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { storage } from "./firebase";
+import { storage } from "./Firebase";
 import { ref, uploadBytes, listAll, getDownloadURL } from "firebase/storage";
 import { v4 } from "react-uuid";
 import Box from "@mui/material/Box";

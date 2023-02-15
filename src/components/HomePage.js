@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import ControlledCarousel from "./CarouselComp";
 import { Container } from "@mui/system";
+import Dialog from "@mui/material/Dialog";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
+import { caddyUrl, crossroadsUrl } from "../ImgUrls";
 
 export default function HomePage() {
+
+  // Open/Close images in Dialog 
+  const [open, setOpen] = useState(false);
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
+  const [url, setUrl] = useState("");
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleClick = (event, url) => {
+    setUrl(url);
+    setOpen(true);
+  };
   
   return (
     <>
@@ -23,12 +41,11 @@ export default function HomePage() {
             </p>
           </div>
           <div className="flex_item_img" id="indeximg">
-            <img
-              className="cadilac"
-              src="https://firebasestorage.googleapis.com/v0/b/digitekniikatlopputyo.appspot.com/o/frontPageImages%2Fkuuba2.jpg?alt=media&token=62ee175f-a50f-49bc-be00-7e28bbf586c5"
-              alt="Kuva vanhan cadilacin sisältä kuuban rannikolta"
-              width="800"
-            />
+         
+            <img src={caddyUrl}
+            alt="Photograph inside an old Cadillac somewhere ni Cuba" 
+            onClick={(e) => handleClick(e, caddyUrl)} />
+            
           </div>
           <div className="flex_item_txt" id="indextokatxt">
             <p>
@@ -36,20 +53,32 @@ export default function HomePage() {
               old plastic camera was able to achieve. My interest in film
               photographity grew quickly and soon I owned many different film
               cameras, as they were dirt cheap still at that time. The attached
-              photo of the inside of an old Cadillac in Cuba was one of the
+              photo taken from inside of an old Cadillac in Cuba was one of the
               first film pictures I've ever shot, yet it still remains as one of
               my all time favourites.
             </p>
           </div>
 
           <div className="flex_item_img" id="indeximg2">
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/digitekniikatlopputyo.appspot.com/o/frontPageImages%2Fkuuba12.jpg?alt=media&token=87636dc5-014d-4223-9a35-493000596129"
-              alt="kuva risteyksestä Havannassa"
-            />
+          <img src={crossroadsUrl}
+            alt="Photograph from crossroad by the sea in Havana" 
+            onClick={(e) => handleClick(e, crossroadsUrl)} />
           </div>
         </div>
       </Container>
+      <Dialog
+        fullScreen={fullScreen}
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="responsive-dialog-title"
+        style={{ maxWidth: "100%", maxHeight: "100%" }}
+      >
+        <img
+          style={{ maxWidth: "100%", height: "auto" }}
+          src={url}
+          alt="not found"
+        />
+      </Dialog>
     </>
   );
 }

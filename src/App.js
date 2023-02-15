@@ -1,12 +1,12 @@
 import ImageGallery from "./components/YourPhotos"
-import ResponsiveAppBar from "./components/appBar";
+import ResponsiveAppBar from "./components/AppBar";
 import HomePage from "./components/HomePage";
 import "./App.css";
 import ScrollButton from "./components/ScrollButton";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MyPhotos from "./components/Myphotos";
-import SimpleBottomNavigation from "./components/bottom";
-import Contact from "./components/contact";
+import SimpleBottomNavigation from "./components/Bottom";
+import Contact from "./components/ContactPage";
 
 
 function App() {

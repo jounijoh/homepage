@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaArrowCircleUp } from "react-icons/fa";
-import { ToTopButton } from "./styles";
+import { ToTopButton } from "./Styles";
 
 const ScrollButton = () => {
   const [visible, setVisible] = useState(false);
