@@ -2,8 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { storage } from "./Firebase";
 import { ref, listAll, getDownloadURL } from "firebase/storage";
-import Container from '@mui/material/Container';
-import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -41,19 +40,24 @@ export default function MyPhotos() {
 
   return (
     <>
-      <Container fluid="md">
+        <Container maxWidth="md">
         <h1>My photo gallery</h1>
         <h4>All photos are taken on film by me</h4>
-        <Box sx={{ width: '100%', height: 1000, border: '2px solid #000', overflowY: "scroll" }}>
-          <ImageList variant="masonry" sx={{
-    columnCount: {
-      xs: '1 !important',
-      sm: '2 !important',
-      md: '3 !important',
-      lg: '4 !important',
-      xl: '4 !important',
-    },
-  }}>
+        </Container>
+        <Container maxWidth="xl">
+          <ImageList
+            variant="masonry"
+            gap={15}
+            sx={{
+              columnCount: {
+                xs: "1 !important",
+                sm: "2 !important",
+                md: "3 !important",
+                lg: "4 !important",
+                xl: "4 !important",
+              },
+            }}
+          >
             {itemData.map((item) => (
               <ImageListItem key={item.img}>
                 <img
@@ -66,7 +70,7 @@ export default function MyPhotos() {
               </ImageListItem>
             ))}
           </ImageList>
-        </Box>
+    
       </Container>
       <Dialog
         fullScreen={fullScreen}

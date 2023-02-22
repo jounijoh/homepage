@@ -6,6 +6,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import { caddyUrl, crossroadsUrl } from "../ImgUrls";
 
+
 export default function HomePage() {
 
   // Open/Close images in Dialog 
@@ -17,8 +18,8 @@ export default function HomePage() {
     setOpen(false);
   };
 
-  const handleClick = (event, url) => {
-    setUrl(url);
+  const handleClick = (event, src) => {
+    setUrl(src);
     setOpen(true);
   };
   

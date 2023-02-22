@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MyPhotos from "./components/Myphotos";
 import SimpleBottomNavigation from "./components/Bottom";
 import Contact from "./components/ContactPage";
+import GalleryWithData from "./components/GalleryWithData";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           ))}
           <Route path="/myphotos" element={<MyPhotos />} />
           <Route path="/photodump" element={<ImageGallery />} />
+          <Route path="/data" element={<GalleryWithData />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <SimpleBottomNavigation />
