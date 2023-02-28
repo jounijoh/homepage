@@ -3,4 +3,4 @@
 - made with React.js 
 - uses Firebase as database
 
-
+- Data fetching for images from my https://github.com/jounijoh/Filmpic-Back-End project in the works 
