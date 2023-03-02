@@ -19,9 +19,8 @@ function App() {
           {["/", "/homepage"].map((path) => (
             <Route path={path} element={<HomePage />} />
           ))}
-          <Route path="/myphotos" element={<MyPhotos />} />
+          <Route path="/myphotos" element={<GalleryWithData />} />
           <Route path="/photodump" element={<ImageGallery />} />
-          <Route path="/data" element={<GalleryWithData />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <SimpleBottomNavigation />
