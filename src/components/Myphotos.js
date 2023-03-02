@@ -11,6 +11,8 @@ import Dialog from "@mui/material/Dialog";
 
 export default function MyPhotos() {
   const [itemData, setItemData] = useState([]);
+ 
+  // GET ALL PHOTOS FROM FIREBASE STORAGE
   useEffect(() => {
     setItemData([]);
     const imageListRef = ref(storage, "myPhotos/");
@@ -22,7 +24,7 @@ export default function MyPhotos() {
       });
     });
   }, []);
-
+  console.log(itemData)
   /// OPEN IMAGE
   const [open, setOpen] = useState(false);
   const theme = useTheme();

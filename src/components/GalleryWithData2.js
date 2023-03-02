@@ -7,6 +7,8 @@ import {
   Box,
   ImageListItemBar,
   IconButton,
+  Typography,
+  Tooltip
 } from "@mui/material";
 import InfoIcon from "@mui/icons-material/Info";
 import React, { useState, useEffect } from "react";
@@ -19,7 +21,7 @@ export default function GalleryWithData() {
       description: "",
       camera: {},
       film: {},
-      phographer: {},
+      photographer: {},
       src: "",
       cols: null,
       rows: null,
@@ -30,7 +32,7 @@ export default function GalleryWithData() {
     description: "",
     camera: "",
     film: "",
-    phographer: "",
+    photographer: "",
     src: "",
   });
 
@@ -58,7 +60,7 @@ export default function GalleryWithData() {
               description: photo.description,
               camera: photo.camera,
               film: photo.film,
-              photograher: photo.user,
+              photographer: photo.user,
               src: process.env.PUBLIC_URL + photo.filePath,
               cols: cols,
               rows: rows,
@@ -73,10 +75,13 @@ export default function GalleryWithData() {
   //const theme = useTheme();
   //const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
 
+  //show info
+  const [isShown, setIsShown] = useState(false);
+
+  // Dialog Open/Close
   const handleClose = () => {
     setOpen(false);
   };
-
   const handleClick = (item) => {
     setPhoto({
       title: item.title,
@@ -134,7 +139,22 @@ export default function GalleryWithData() {
               <ImageListItemBar
                 position="below"
                 title={item.title}
-                subtitle={`Film: ${item.film.name} | Camera: ${item.camera.name}`}
+                //subtitle={`Film: ${item.film.name} | Camera: ${item.camera.name}`}
+                actionIcon={
+                  <Tooltip title={<React.Fragment>
+                  <Typography>{`Photo by: ${item.photographer.firstname} ${item.photographer.lastname}`}</Typography>
+                  <Typography>{`Camera: ${item.camera.name}`} </Typography>
+                 <Typography>{`Film: ${item.film.name} ${item.film.type}`}</Typography>
+                  </React.Fragment>}
+                  placement="top-end">
+                  <IconButton
+                    sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
+                    aria-label={`info about ${item.title}`}
+                  >
+                    <InfoIcon />
+                  </IconButton>
+                  </Tooltip>
+                }
               />
             </ImageListItem>
           ))}
@@ -145,12 +165,23 @@ export default function GalleryWithData() {
         open={open}
         onClose={handleClose}
         aria-labelledby="responsive-dialog-title"
+        textStyle={{ textAlign: "center" }}
+        PaperProps={{
+          style: {
+            backgroundColor: "transparent",
+            boxShadow: "none",
+          },
+        }}
       >
         <img
           style={{ maxWidth: "auto", height: "80%" }}
           src={photo.src}
           alt={photo.description || "not found"}
         />
+        <Typography
+          variant="h4"
+          align="center"
+        >{`Film: ${photo.film} | Camera: ${photo.camera}`}</Typography>
       </Dialog>
     </>
   );

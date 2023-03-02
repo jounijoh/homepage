@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { Container } from "@mui/system";
-import { getDatabase } from "firebase/database";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
-import { ref, set } from "firebase/database";
+import { ref, set, getDatabase  } from "firebase/database";
 import { v4 } from "react-uuid";
 
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  
   const db = getDatabase();
   const handleSubmit = (event) => {
     event.preventDefault();

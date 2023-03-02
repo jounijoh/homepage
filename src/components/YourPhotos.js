@@ -20,7 +20,7 @@ function ImageGallery() {
   const uploadImage = () => {
     if (imgUpload == null) return alert("Error loading image");
 
-    const imageRef = ref(storage, `images/${imgUpload.name + v4}`);
+    const imageRef = ref(storage, `yourImages/${imgUpload.name + v4}`);
     uploadBytes(imageRef, imgUpload).then((snapshot) => {
       getDownloadURL(snapshot.ref).then((url) => {
         setImgList((prev) => [...prev, { img: url, title: "title" }]);
@@ -31,7 +31,7 @@ function ImageGallery() {
   // FETCH FIREBASE FILES
 
   useEffect(() => {
-    const imageListRef = ref(storage, "images/");
+    const imageListRef = ref(storage, "yourImages/");
     listAll(imageListRef).then((response) => {
       response.items.forEach((item) => {
         getDownloadURL(item).then((url) => {
@@ -61,6 +61,7 @@ function ImageGallery() {
       <Container fluid="md">
         <h1>Welcome to photodump!</h1>
         <h4>Feel free to share your pictures here!</h4>
+        <p>Remember that you cant delete them after loading</p>
         <div>
           <input
             type="file"
