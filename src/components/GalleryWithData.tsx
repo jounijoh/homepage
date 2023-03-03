@@ -18,6 +18,7 @@ import { getStorage, ref as storageRef, getDownloadURL } from "firebase/storage"
 export default function GalleryWithData() {
   const [photos, setPhotos] = useState<Photograph[]>([]);
   const [photo, setPhoto] = useState<Photograph>()
+  // CONNECTION TO FIREBASE
   const db = getDatabase();
   const storage = getStorage();
   const fbRef = ref(db, 'photodata');
@@ -47,7 +48,7 @@ export default function GalleryWithData() {
       setPhotos(data)
       return data
     })
-    // AFTER SUCCESFUL FETCH FROM LOCAL DATABASE SET DATA AS BACKUP TO FIREBASE
+    // AFTER SUCCESFUL FETCH FROM LOCAL DATABASE AND URL SETUP SET DATA AS BACKUP TO FIREBASE
     .then((data) => set(ref(db, 'photodata'), {
       body: data
     }))
@@ -58,7 +59,7 @@ export default function GalleryWithData() {
     });
     
   };
-
+  // FETCH THE DATA 
   useEffect(() => {
     fetchData();
   }, []);
@@ -105,6 +106,7 @@ export default function GalleryWithData() {
         >
           {photos!.map((item) => (
             <ImageListItem
+            // MAP PHOTOS USING MUI IMAGELIST 
               key={item.title}
             >
               <img
@@ -118,6 +120,7 @@ export default function GalleryWithData() {
                 position="below"
                 title={item.title}
                 actionIcon={
+                  // TOOLTIP AS AN INFO WINDOW FOR IMAGE DATA
                   <Tooltip title={<React.Fragment>
                     <Typography>{`Photo by: ${item.user.firstname} ${item.user.lastname}`}</Typography>
                     <Typography>{`Camera: ${item.camera.name}`} </Typography>
@@ -138,6 +141,7 @@ export default function GalleryWithData() {
         </ImageList>
       </Container>
       <Dialog
+        // MODAL WINDOW FOR OPENING IMAGES
         maxWidth={"xl"}
         open={open}
         onClose={handleClose}
@@ -155,7 +159,8 @@ export default function GalleryWithData() {
           alt={photo?.description || "not found"}
         />
         <Typography
-          variant="h4"
+          // SHOW FILM AND CAMERA USED BELOW OPENED IMAGE
+          variant="h6"
           align="center"
         >{`Film: ${photo?.film.name || null} | Camera: ${photo?.camera.name || null}`}</Typography>
       </Dialog>

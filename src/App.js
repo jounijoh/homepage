@@ -4,7 +4,6 @@ import HomePage from "./components/HomePage";
 import "./App.css";
 import ScrollButton from "./components/ScrollButton";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import MyPhotos from "./components/Myphotos";
 import SimpleBottomNavigation from "./components/Bottom";
 import Contact from "./components/ContactPage";
 import GalleryWithData from "./components/GalleryWithData";

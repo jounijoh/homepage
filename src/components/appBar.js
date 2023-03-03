@@ -11,6 +11,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-router-dom';
 
+
 const pages = ['homepage', 'myphotos', 'photodump', 'contact'];
 
 
@@ -27,11 +28,10 @@ function ResponsiveAppBar() {
     setAnchorElNav(null);
   };
 
-
-
   return (
+    <div style={{flexGrow: 1}}>
     <AppBar position="sticky" style={{ background: 'rgb(37, 61, 83)' }}>
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" j>
         <Toolbar disableGutters>
           <Typography
             variant="h6"
@@ -39,13 +39,16 @@ function ResponsiveAppBar() {
             component="a"
             href="/homepage"
             sx={{
+              justifyContent: "flex-end",
+              flexGrow: 1,
               mr: 2,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
-              letterSpacing: '.3rem',
+              letterSpacing: '.5rem',
               color: 'inherit',
               textDecoration: 'none',
+
             }}
           >
             FilmPic
@@ -128,6 +131,7 @@ function ResponsiveAppBar() {
         </Toolbar>
       </Container>
     </AppBar>
+    </div>
   );
 }
 export default ResponsiveAppBar;
