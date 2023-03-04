@@ -31,7 +31,7 @@ function ResponsiveAppBar() {
   return (
     <div style={{flexGrow: 1}}>
     <AppBar position="sticky" style={{ background: 'rgb(37, 61, 83)' }}>
-      <Container maxWidth="xl" j>
+      <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
             variant="h6"

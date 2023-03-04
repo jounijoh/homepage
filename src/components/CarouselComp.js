@@ -42,7 +42,7 @@ export default function ControlledCarousel() {
           />
   
           <Carousel.Caption>
-            <h3>Photograps on film just look more natural to me</h3>
+            <h3>Photographs on film just look more natural to me</h3>
             <p>
               There is something magical in the imperfection and grain on them
             </p>

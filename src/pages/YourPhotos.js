@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { storage } from "./Firebase";
+import { storage } from "../components/Firebase";
 import { ref, uploadBytes, listAll, getDownloadURL } from "firebase/storage";
 import { v4 } from "react-uuid";
 import Box from "@mui/material/Box";
@@ -11,6 +11,7 @@ import { useTheme } from "@mui/material/styles";
 import Dialog from "@mui/material/Dialog";
 import Container from "@mui/material/Container";
 
+// SIMPLE PAGE WHERE ANYONE CAN UPLOAD PHOTO 
 
 function ImageGallery() {
   const [imgUpload, setImgUpload] = useState(null);

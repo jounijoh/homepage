@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import ControlledCarousel from "./CarouselComp";
+import ControlledCarousel from "../components/CarouselComp";
 import { Container } from "@mui/system";
 import Dialog from "@mui/material/Dialog";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
-import { caddyUrl, crossroadsUrl } from "../ImgUrls";
+import { caddyUrl, crossroadsUrl } from "../urls/ImgUrls";
 
 
 export default function HomePage() {

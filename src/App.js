@@ -1,12 +1,12 @@
-import ImageGallery from "./components/YourPhotos"
+import ImageGallery from "./pages/YourPhotos"
 import ResponsiveAppBar from "./components/AppBar";
-import HomePage from "./components/HomePage";
+import HomePage from "./pages/HomePage";
 import "./App.css";
 import ScrollButton from "./components/ScrollButton";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import SimpleBottomNavigation from "./components/Bottom";
-import Contact from "./components/ContactPage";
-import GalleryWithData from "./components/GalleryWithData";
+import SimpleBottomNavigation from "./components/BottomNav";
+import Contact from "./pages/ContactPage";
+import GalleryWithData from "./pages/MyPhotos";
 
 
 function App() {
