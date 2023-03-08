@@ -9,3 +9,4 @@
 - So when fetching data, if Back End is not answering, data is fetched from Firebase.
 - **Data handling like this is by no means ideal or necessary, but this project works as a playground for me to try, learn, and display different technics.** 
 
+- **Note** I am working on this on my free time when I can. I've been mostly working on MyPhotos for now, and YourPhotos and Contact page are going to be under construction later.
